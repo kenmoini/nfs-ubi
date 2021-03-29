@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi-init:latest
+FROM registry.access.redhat.com/ubi8/ubi-init
 
 # Basic Updates
 RUN dnf update -y \
@@ -13,8 +13,8 @@ RUN mkdir -p /var/lib/nfs/rpc_pipefs                                            
     echo "rpc_pipefs  /var/lib/nfs/rpc_pipefs  rpc_pipefs  defaults  0  0" >> /etc/fstab && \
     echo "nfsd        /proc/fs/nfsd            nfsd        defaults  0  0" >> /etc/fstab
     
-RUN systemctl enable --now rpcbind \
- && systemctl enable --now nfs-server
+RUN systemctl enable rpcbind \
+ && systemctl enable nfs-server
 
 RUN rm -rf /var/log/*
 
