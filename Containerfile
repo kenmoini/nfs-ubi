@@ -1,4 +1,5 @@
-FROM registry.access.redhat.com/ubi8/ubi-init
+#FROM registry.access.redhat.com/ubi8/ubi-init
+FROM fedora
 
 # Basic Updates
 RUN dnf update -y \

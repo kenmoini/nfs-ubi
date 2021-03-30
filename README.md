@@ -1,4 +1,6 @@
-# NFS Server on Red Hat Universal Base Image
+# NFS Server on Fedora because RH UBI isn't really usable without the container build platform having access to a RHEL subscription
+
+[![Docker Repository on Quay](https://quay.io/repository/kenmoini/nfs-ubi/status "Docker Repository on Quay")](https://quay.io/repository/kenmoini/nfs-ubi)
 
 ## Building the Image
 
